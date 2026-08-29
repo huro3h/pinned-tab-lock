@@ -1,0 +1,37 @@
+# ── macOS ──────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+.DocumentRevisions-V100
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# ── JetBrains (RubyMine / IntelliJ 系) ─────────────────
+# プロジェクト設定ディレクトリごと無視（共有したい場合は個別に管理）
+.idea/
+# モジュール/ワークスペース系ファイル（.idea 外に出ることがある）
+*.iml
+*.ipr
+*.iws
+# RubyMine が生成するキャッシュ等
+.rakeTasks
+
+# ── エディタ / OS の一時ファイル全般 ───────────────────
+*~
+*.swp
+*.swo
+.vscode/
+
+# ── 配布用アーカイブ ───────────────────────────────────
+# zip 化した配布物（このディレクトリ内に置いた場合）
+just-wipe.zip
+*.zip
+
+# ── ログ・一時ファイル ─────────────────────────────────
+*.log
+tmp/

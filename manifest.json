@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Pinned Tab Lock",
+  "version": "1.0.0",
+  "description": "固定タブを別サイトで上書きさせず、新しいタブで開く",
+  "permissions": ["tabs", "webNavigation", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Pinned Tab Lock",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

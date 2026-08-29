@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="row">
+      <strong class="title">固定したタブページを保護</strong>
+      <label class="switch">
+        <input type="checkbox" id="enabled" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <p class="state hidden" id="state"></p>
+
+    <div class="block">
+      <div class="row">
+        <span class="label">タブをアクティブで開く</span>
+        <label class="switch small">
+          <input type="checkbox" id="activateNewTab" />
+          <span class="slider"></span>
+        </label>
+      </div>
+      <div class="row spaced">
+        <span class="label">新しいタブページも保護する</span>
+        <label class="switch small">
+          <input type="checkbox" id="protectNewTab" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <p class="status" id="status"></p>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

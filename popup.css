@@ -1,0 +1,150 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1f2330;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #1a73e8;
+  --accent-off: #c6c6c6;
+  --ok: #1a73e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1e27;
+    --fg: #e8eaf0;
+    --muted: #9aa0ad;
+    --border: #333846;
+    --accent: #5b9cf8;
+    --accent-off: #4d4d4d;
+    --ok: #5b9cf8;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 288px;
+  margin: 0;
+  padding: 14px 16px 12px;
+  font-family: -apple-system, "Segoe UI", "Hiragino Sans", "Yu Gothic UI",
+    sans-serif;
+  font-size: 13px;
+  color: var(--fg);
+  background: var(--bg);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.label {
+  color: var(--fg);
+}
+
+/* トグルスイッチ */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  background: var(--accent-off);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.15s;
+}
+
+.switch input:checked + .slider {
+  background: var(--accent);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(14px);
+}
+
+.switch input:focus-visible + .slider {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.switch.small {
+  width: 28px;
+  height: 16px;
+}
+
+.switch.small .slider::before {
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+.switch.small input:checked + .slider::before {
+  transform: translateX(12px);
+}
+
+.state {
+  margin: 12px 0 0;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  word-break: break-all;
+}
+
+.hidden {
+  display: none;
+}
+
+.block {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.status {
+  min-height: 16px;
+  margin: 8px 0 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--ok);
+}
+
+.row.spaced {
+  margin-top: 14px;
+}

@@ -69,4 +69,4 @@ Chrome はその固定タブの中身を差し替えてしまう。この拡張�
 
 ## ライセンス
 
-MIT
+[MIT](https://github.com/huro3h/pinned-tab-lock/blob/main/LICENSE)
